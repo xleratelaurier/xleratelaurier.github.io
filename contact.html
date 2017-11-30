@@ -182,76 +182,43 @@ input, textarea, select{font-size:12px; font-family:Georgia,"Times New Roman",Ti
           <!-- Introduction -->
           <section id="intro" class="last clear">
             <article>
-              <figure><img src="images/academics_logo.png" style="width: 332px; height: 303px;">
+              <figure><br>
+                <figcaption> </figcaption>
+                <div style="text-align: left;"><figcaption>
+                    <h2>We want to hear from you...</h2>
+                    <p style="width: 424px;">We're here to help! Feel free to
+                      reach out if you have any questions about what we do, our
+                      events, our membership options, or anything else you want
+                      to know! Our team is always eager to hear your feedback
+                      and we are happy to respond to all messages within 24
+                      hours. <br>
+                    </p>
+                  </figcaption></div>
                 <figcaption>
-                  <h2>We want to hear from you...</h2>
-                  <p>Name:</p>
-                  <p>Email:</p>
-                  <p>Category:</p>
-                  <p>Message:</p>
-                </figcaption> </figure>
+                  <?php $action=$_REQUEST['action'];
+if ($action=="")    /* display the contact form */    {    ?>
+                  <form action="" method="POST" enctype="multipart/form-data"> <input
+
+                      name="action" value="submit" type="hidden"> Your name:<br>
+                    <input name="name" value="" size="30" type="text"><br>
+                    Your email:<br>
+                    <input name="email" value="" size="30" type="text"><br>
+                    Your message:<br>
+                    <textarea name="message" rows="7" cols="30"></textarea><br>
+                    <input value="Send email" type="submit"> </form>
+                  <!--?php
+    } else                /* send the submitted data */    {    $name=$_REQUEST['name'];
+    $email=$_REQUEST['email'];    $message=$_REQUEST['message'];    if (($name=="")||($email=="")||($message==""))        {
+        echo "All fields are required, please fill the form                  again."; } else{ $from="From:
+                  $name&lt;$email&gt;\r\nReturn-path: $email"; $subject="Message                  sent using your contact form";
+                  mail("mezz6260@mylaurier.ca", $subject, $message,                  $from); echo "Email sent!"; } } ?&gt; <a href=\"\"-->
+                </figcaption><figcaption> </figcaption> </figure>
             </article>
           </section>
           <!-- / Introduction --> </div>
         <!-- / content body --> </div>
     </div>
-    <!-- Footer -->
-    <div class="wrapper row3">
-      <div id="footer" class="clear">
-        <!-- Section One -->
-        <section class="one_quarter">
-          <h2 class="title">Link Block</h2>
-          <nav>
-            <ul>
-              <li><a href="#">Lorem ipsum dolor sit</a></li>
-              <li><a href="#">Amet consectetur</a></li>
-              <li><a href="#">Praesent vel sem id</a></li>
-              <li><a href="#">Curabitur hendrerit est</a></li>
-              <li class="last"><a href="#">Sed a nulla urna</a></li>
-            </ul>
-          </nav>
-        </section>
-        <!-- Section Two -->
-        <section class="one_quarter">
-          <h2 class="title">Link Block</h2>
-          <nav>
-            <ul>
-              <li><a href="#">Lorem ipsum dolor sit</a></li>
-              <li><a href="#">Amet consectetur</a></li>
-              <li><a href="#">Praesent vel sem id</a></li>
-              <li><a href="#">Curabitur hendrerit est</a></li>
-              <li class="last"><a href="#">Sed a nulla urna</a></li>
-            </ul>
-          </nav>
-        </section>
-        <!-- Section Three -->
-        <section class="one_quarter">
-          <h2 class="title">Link Block</h2>
-          <nav>
-            <ul>
-              <li><a href="#">Lorem ipsum dolor sit</a></li>
-              <li><a href="#">Amet consectetur</a></li>
-              <li><a href="#">Praesent vel sem id</a></li>
-              <li><a href="#">Curabitur hendrerit est</a></li>
-              <li class="last"><a href="#">Sed a nulla urna</a></li>
-            </ul>
-          </nav>
-        </section>
-        <!-- Section Four -->
-        <section class="one_quarter lastbox">
-          <h2 class="title">Link Block</h2>
-          <nav>
-            <ul>
-              <li><a href="#">Lorem ipsum dolor sit</a></li>
-              <li><a href="#">Amet consectetur</a></li>
-              <li><a href="#">Praesent vel sem id</a></li>
-              <li><a href="#">Curabitur hendrerit est</a></li>
-              <li class="last"><a href="#">Sed a nulla urna</a></li>
-            </ul>
-          </nav>
-        </section>
-        <!-- / Section --> </div>
-    </div>
+    <!-- Footer --> 
     <!-- Copyright -->
     <div class="wrapper row4">
       <footer id="copyright" class="clear">
