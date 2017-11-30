@@ -11,6 +11,141 @@ Author URI: http://www.os-templates.com/
 Licence: <a href="http://www.os-templates.com/template-terms">Website Template Licence</a>
 */
 
+      * {
+  box-sizing: border-box;
+}
+
+/* Set a background color */
+body {
+  background-color: #D1F2EB;
+  font-family: Helvetica, sans-serif;
+}
+
+/* The actual timeline (the vertical ruler) */
+.timeline {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* The actual timeline (the vertical ruler) */
+.timeline::after {
+  content: '';
+  position: absolute;
+  width: 6px;
+  background-color: #D1F2EB ;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  margin-left: -3px;
+}
+
+/* Container around content */
+.container {
+  padding: 10px 40px;
+  position: relative;
+  background-color: inherit;
+  width: 50%;
+}
+
+/* The circles on the timeline */
+.container::after {
+  content: '';
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  right: -17px;
+  background-color: white;
+  border: 4px solid #FF9F55;
+  top: 15px;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+/* Place the container to the left */
+.left {
+  left: 0;
+}
+
+/* Place the container to the right */
+.right {
+  left: 50%;
+}
+
+/* Add arrows to the left container (pointing right) */
+.left::before {
+  content: " ";
+  height: 0;
+  position: absolute;
+  top: 22px;
+  width: 0;
+  z-index: 1;
+  right: 30px;
+  border: medium solid white;
+  border-width: 10px 0 10px 10px;
+  border-color: transparent transparent transparent white;
+}
+
+/* Add arrows to the right container (pointing left) */
+.right::before {
+  content: " ";
+  height: 0;
+  position: absolute;
+  top: 22px;
+  width: 0;
+  z-index: 1;
+  left: 30px;
+  border: medium solid white;
+  border-width: 10px 10px 10px 0;
+  border-color: transparent white transparent transparent;
+}
+
+/* Fix the circle for containers on the right side */
+.right::after {
+  left: -16px;
+}
+
+/* The actual content */
+.content {
+  padding: 20px 30px;
+  background-color: white;
+  position: relative;
+  border-radius: 6px;
+}
+
+/* Media queries - Responsive timeline on screens less than 600px wide */
+@media all and (max-width: 600px) {
+/* Place the timelime to the left */
+  .timeline::after {
+    left: 31px;
+  }
+
+/* Full-width containers */
+  .container {
+    width: 100%;
+    padding-left: 70px;
+    padding-right: 25px;
+  }
+
+/* Make sure that all arrows are pointing leftwards */
+  .container::before {
+    left: 60px;
+    border: medium solid white;
+    border-width: 10px 10px 10px 0;
+    border-color: transparent white transparent transparent;
+  }
+
+/* Make sure all circles are at the same spot */
+  .left::after, .right::after {
+    left: 15px;
+  }
+
+/* Make all right containers behave like the left ones */
+  .right {
+    left: 0%;
+  }
+}
+      
 html{overflow-y:scroll;} /* Forces a scrollbar when the viewport is larger than the websites content - CSS3 */
 
 body{margin:0; padding:0; font-size:13px; font-family:Georgia, "Times New Roman", Times, serif; color:#919191; background-color:#232323;}
@@ -178,89 +313,253 @@ input, textarea, select{font-size:12px; font-family:Georgia,"Times New Roman",Ti
           <!-- ########################################################################################## -->
           <!-- ########################################################################################## -->
           <!-- ########################################################################################## -->
-          <!-- ########################################################################################## -->
-          <!-- Introduction -->
+          <!-- ########################################################################################## -->&nbsp;
           <section id="intro" class="last clear">
             <article>
-              <figure><img src="images/academics_logo.png" style="width: 332px; height: 303px;">
+              <figure>
+                <div style="text-align: center;"><figcaption></figcaption>
+                  <h2 style="width: 956px;">Upcoming Events...</h2>
+                  <p><em>Each event we run is designed to provide students with
+                      the opportunity to improve their professional skills, to
+                      feel confident and supported academically, and to
+                      integrate into the Laurier community. As a team, we
+                      believe that maintaining this balance of academic success,
+                      community involvement, and social development sets our
+                      students apart as respectful business leaders. Find out
+                      more information about our events for the 2017/2018
+                      academic year...</em></p>
+                  <p><em><br>
+                    </em></p>
+                  <figcaption>
+                    <p> </p>
+                    <div class="timeline">
+                      <div class="container left">
+                        <div class="content">
+                          <h4>Sept.18</h4>
+                          <p><strong>ADVICE FOR FRESHMEN</strong></p>
+                        </div>
+                      </div>
+                      <div class="container right">
+                        <div class="content">
+                          <h2>Sept.28</h2>
+                          <p><strong>HOW TO GET AWAY WITH NEW VENTURE<br>
+                            </strong></p>
+                        </div>
+                      </div>
+                      <div class="container left">
+                        <div class="content">
+                          <h2>Nov.12</h2>
+                          <p><strong>PERSONAL BRANDING WORKSHOP<br>
+                            </strong></p>
+                        </div>
+                      </div>
+                      <div class="container right">
+                        <div class="content">
+                          <h2>Nov.23</h2>
+                          <p><strong>HOW TO GET AWAY WITH NEW VENTURE 2.0<br>
+                            </strong></p>
+                        </div>
+                      </div>
+                      <div class="container left">
+                        <div class="content">
+                          <h2>Dec</h2>
+                          <h2>2017</h2>
+                          <p><strong>BU111 QUIZBOWL<br>
+                            </strong></p>
+                          <p>(Specific date based on final)<strong><br>
+                            </strong></p>
+                        </div>
+                      </div>
+                      <div class="container right">
+                        <div class="content">
+                          <h2>Jan.28</h2>
+                          <p><strong>XLERATE'S 15TH ANNUAL CASE CONFERENCE<br>
+                            </strong></p>
+                        </div>
+                      </div>
+                      <div class="container left">
+                        <div class="content">
+                          <h2>Feb</h2>
+                          <h2>2018</h2>
+                          <p><strong>PITCH CRITIQUE<br>
+                            </strong></p>
+                        </div>
+                      </div>
+                      <div class="container right">
+                        <div class="content">
+                          <h2>April</h2>
+                          <h2>2018</h2>
+                          <p><strong>BU121 QUIZBOWL<br>
+                            </strong></p>
+                          <p>(Specific date based on final)</p>
+                        </div>
+                      </div>
+                    </div>
+                    <br>
+                    <p></p>
+                  </figcaption></div>
                 <figcaption>
-                  <h2>Upcoming Events...</h2>
-                  <p>Content. content. content. content. content. content.
-                    content. content. content. you get the idea. content.
-                    content. content. content. content. content. content.
-                    content. content. content. content. content. you get the
-                    idea. content. content. content. content. content. content.
-                    content. content. content. content. content. content. you
-                    get the idea. content. content. content. content. content.
-                    content. content. content. content. content. content.
-                    content. you get the idea. content. content. content.
-                    content. content. content. content. content. content.
-                    content. content. content. you get the idea. content.
-                    content. content. content. content. content. content.
-                    content. content. content. content. content. you get the
-                    idea. content. content. content. content.</p>
-                </figcaption> </figure>
+                  <h3 class="text-align-center" style="text-rendering: optimizeLegibility; font-family: Raleway; font-weight: 300; font-style: normal; font-size: 15px; line-height: 1.4em; letter-spacing: 0.05em; text-transform: uppercase; color: rgba(28, 28, 28, 0.8); margin: 0px auto 0.3em; text-align: center; font-variant-ligatures: normal; font-variant-caps: normal; orphans: 2; text-indent: 0px; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgba(4, 6, 5, 0.08); text-decoration-style: initial; text-decoration-color: initial;"><strong
+
+                      style="font-weight: bold; word-wrap: break-word;">ADVICE
+                      FOR FRESHMEN</strong></h3>
+                  <p class="text-align-center" id="yui_3_17_2_1_1512003927251_1884"
+
+                    style="text-align: center; word-wrap: break-word; margin-bottom: 0px; color: rgba(0, 0, 0, 0.66); font-family: Raleway; font-size: 15px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: 0.4px; orphans: 2; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgba(4, 6, 5, 0.08); text-decoration-style: initial; text-decoration-color: initial;">Take
+                    your first steps to success at Advice for Freshmen! This
+                    event provides first year business and economics students
+                    with<span>&nbsp;</span><strong id="yui_3_17_2_1_1512003927251_1883"
+
+                      style="font-weight: bold; word-wrap: break-word;">academic,
+                      social, and extracurricular advice</strong><span>&nbsp;</span>to
+                    ensure their success in the coming year. Talking points for
+                    this event include everything from getting into the co-op
+                    program to surviving BU111 and much more. In this session,
+                    we emphasize that there are no stupid questions - ask us
+                    anything you want to know!&nbsp;This is the ultimate
+                    resource for eager students who desire a rewarding first
+                    year of university. </p>
+                  <p style="margin-left: 104px;"><br>
+                  </p>
+                  <h3 class="text-align-center" style="text-rendering: optimizeLegibility; font-family: Raleway; font-weight: 300; font-style: normal; font-size: 15px; line-height: 1.4em; letter-spacing: 0.05em; text-transform: uppercase; color: rgba(28, 28, 28, 0.8); margin: 0px auto 0.3em; text-align: center; font-variant-ligatures: normal; font-variant-caps: normal; orphans: 2; text-indent: 0px; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgba(4, 6, 5, 0.08); text-decoration-style: initial; text-decoration-color: initial;"><strong
+
+                      style="font-weight: bold; word-wrap: break-word;">XLERATE'S
+                      15TH ANNUAL CASE CONFERENCE</strong></h3>
+                  <p class="text-align-center" style="text-align: center; word-wrap: break-word; color: rgba(0, 0, 0, 0.66); font-family: Raleway; font-size: 15px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: 0.4px; orphans: 2; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgba(4, 6, 5, 0.08); text-decoration-style: initial; text-decoration-color: initial;">For
+                    the first time, XLerate Laurier will be hosting first year
+                    students from other universities across Southern Ontario for
+                    our flagship event. This<span>&nbsp;</span><strong style="font-weight: bold; word-wrap: break-word;">inter-university
+                      case competition</strong><span>&nbsp;</span>invites
+                    students to tackle a problem currently being faced by a
+                    company or their respective industry. In teams of 4,
+                    students are given the opportunity to compete first year
+                    against first year and present their innovative solutions to
+                    a panel of judges, testing their skills and improving their
+                    ability to critically evaluate business decisions.
+                    Throughout the day, students have the opportunity to
+                    participate in workshops lead by successful business
+                    professionals and can enjoy a complimentary breakfast and
+                    lunch. </p>
+                  <p style="margin-left: 104px;"><br>
+                  </p>
+                  <h3 class="text-align-center" style="text-rendering: optimizeLegibility; font-family: Raleway; font-weight: 300; font-style: normal; font-size: 15px; line-height: 1.4em; letter-spacing: 0.05em; text-transform: uppercase; color: rgba(28, 28, 28, 0.8); margin: 0px auto 0.3em; text-align: center; font-variant-ligatures: normal; font-variant-caps: normal; orphans: 2; text-indent: 0px; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgba(4, 6, 5, 0.08); text-decoration-style: initial; text-decoration-color: initial;"><strong
+
+                      style="font-weight: bold; word-wrap: break-word;">PITCH
+                      CRITIQUE</strong></h3>
+                  <p class="text-align-center" style="text-align: center; word-wrap: break-word; margin-bottom: 0px; color: rgba(0, 0, 0, 0.66); font-family: Raleway; font-size: 15px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: 0.4px; orphans: 2; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgba(4, 6, 5, 0.08); text-decoration-style: initial; text-decoration-color: initial;">As
+                    a part of the New Venture project, students must develop an
+                    'elevator pitch' to communicate their ideas. This event is
+                    geared towards proactive students who wish to practice their
+                    pitch in front of past winners of the Pitch Competition and
+                    coached from the Golden Speakers team. Students will receive<span>&nbsp;</span><strong
+
+                      style="font-weight: bold; word-wrap: break-word;">constructive
+                      criticism and feedback to improve their content and
+                      presentation skills,&nbsp;</strong>ultimately developing
+                    their confidence as public speakers.</p>
+                  <p style="margin-left: 104px;"><br>
+                  </p>
+                  <h3 class="text-align-center" style="text-rendering: optimizeLegibility; font-family: Raleway; font-weight: 300; font-style: normal; font-size: 15px; line-height: 1.4em; letter-spacing: 0.05em; text-transform: uppercase; color: rgba(28, 28, 28, 0.8); margin: 0px auto 0.3em; text-align: center; font-variant-ligatures: normal; font-variant-caps: normal; orphans: 2; text-indent: 0px; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgba(4, 6, 5, 0.08); text-decoration-style: initial; text-decoration-color: initial;"><strong
+
+                      style="font-weight: bold; word-wrap: break-word;">HOW TO
+                      GET AWAY WITH NEW VENTURE</strong></h3>
+                  <p class="text-align-center" style="text-align: center; word-wrap: break-word; margin-bottom: 0px; color: rgba(0, 0, 0, 0.66); font-family: Raleway; font-size: 15px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: 0.4px; orphans: 2; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgba(4, 6, 5, 0.08); text-decoration-style: initial; text-decoration-color: initial;"
+
+                    id="yui_3_17_2_1_1512003927251_1886"><span style="word-wrap: break-word;">Held
+                      in Partnership with<span>&nbsp;</span><span style="font-weight: bold; word-wrap: break-word;">StartUp
+                        Laurier</span><span>&nbsp;</span>&amp;<span>&nbsp;</span><span
+
+                        style="font-weight: bold; word-wrap: break-word;">Technology
+                        Management Laurier</span><span>.</span></span><em style="word-wrap: break-word;"><span>
+                      </span></em>Designed to provide guidance to first year
+                    Lazaridis students during the preliminary phases of one of
+                    the largest projects during their time at university: the
+                    New Venture Project.<span>&nbsp;</span><strong style="font-weight: bold; word-wrap: break-word;">Developing
+                      a new venture idea</strong><span>&nbsp;</span>is one of
+                    the most difficult components of the project, and XLerate
+                    provides students with the ability to curate ideas with
+                    business professionals and upper year students. By
+                    discussing feasibility, existing products, and providing
+                    professional guidance, this event successfully caters to
+                    groups in three specific stages of project development:
+                    those in the idea generation phase, those who have an idea
+                    and are looking for critical feedback and lastly, those who
+                    are specifically planning on pursuing a technology-based
+                    product.</p>
+                  <p><br>
+                  </p>
+                  <h3 class="text-align-center" style="text-rendering: optimizeLegibility; font-family: Raleway; font-weight: 300; font-style: normal; font-size: 15px; line-height: 1.4em; letter-spacing: 0.05em; text-transform: uppercase; color: rgba(28, 28, 28, 0.8); margin: 0px auto 0.3em; text-align: center; font-variant-ligatures: normal; font-variant-caps: normal; orphans: 2; text-indent: 0px; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgba(4, 6, 5, 0.08); text-decoration-style: initial; text-decoration-color: initial;"><strong
+
+                      style="font-weight: bold; word-wrap: break-word;">PERSONAL
+                      BRANDING WORKSHOP</strong></h3>
+                  <p class="text-align-center" style="text-align: center; word-wrap: break-word; margin-bottom: 0px; color: rgba(0, 0, 0, 0.66); font-family: Raleway; font-size: 15px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: 0.4px; orphans: 2; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgba(4, 6, 5, 0.08); text-decoration-style: initial; text-decoration-color: initial;"
+
+                    id="yui_3_17_2_1_1512003927251_1890">This event is
+                    especially valuable to first year students who are
+                    interested in applying to the Co-op program here at Laurier.
+                    Many students have little understanding of the importance of
+                    personal branding and how it can both benefit and hinder
+                    them -&nbsp;so we are here to help! This event provides
+                    information on what a personal brand is and<span>&nbsp;</span><strong
+
+                      style="font-weight: bold; word-wrap: break-word;">how to
+                      effectively communicate one's value to an employer during
+                      networking events and interviews</strong>. We also invite
+                    speakers with professional LinkedIn experience to generate
+                    discussion with students about how to effectively use the
+                    platform to help them achieve their goals.&nbsp;During the
+                    event, students are also invited to enjoy free food and have
+                    professional head shots taken for their profiles.</p>
+                  <p><br>
+                  </p>
+                  <h3 class="text-align-center" style="text-rendering: optimizeLegibility; font-family: Raleway; font-weight: 300; font-style: normal; font-size: 15px; line-height: 1.4em; letter-spacing: 0.05em; text-transform: uppercase; color: rgba(28, 28, 28, 0.8); margin: 0px auto 0.3em; text-align: center; font-variant-ligatures: normal; font-variant-caps: normal; orphans: 2; text-indent: 0px; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgba(4, 6, 5, 0.08); text-decoration-style: initial; text-decoration-color: initial;"><strong
+
+                      style="font-weight: bold; word-wrap: break-word;">HOW TO
+                      GET AWAY WITH NEW VENTURE 2.0</strong></h3>
+                  <p class="text-align-center" id="yui_3_17_2_1_1512003927251_1895"
+
+                    style="text-align: center; word-wrap: break-word; color: rgba(0, 0, 0, 0.66); font-family: Raleway; font-size: 15px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: 0.4px; orphans: 2; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgba(4, 6, 5, 0.08); text-decoration-style: initial; text-decoration-color: initial;">Held
+                    in Partnership with StartUp Laurier. After an incredible
+                    turnout and encouraging feedback from participants at
+                    HTGAWNV Part 1, we teamed up with StartUp Laurier once again
+                    to execute a follow up event. This event focuses on
+                    providing first year students with a second round of
+                    feedback on their new venture projects. Group members will
+                    have the opportunity to submit their work for review in
+                    advance of their meeting. From there, each team will have a
+                    15-20 minute session with upper year students and teaching
+                    assistants to discuss<span>&nbsp;</span><strong style="font-weight: bold; word-wrap: break-word;">tailored
+                      suggestions for success in the New Venture written report</strong>.
+                    Donations to the Lazaridis Students' Society Movember
+                    campaign are encouraged for this free event.</p>
+                  <p><br>
+                  </p>
+                  <p> </p>
+                  <h3 class="text-align-center" style="text-rendering: optimizeLegibility; font-family: Raleway; font-weight: 300; font-style: normal; font-size: 15px; line-height: 1.4em; letter-spacing: 0.05em; text-transform: uppercase; color: rgba(28, 28, 28, 0.8); margin: 0px auto 0.3em; text-align: center; font-variant-ligatures: normal; font-variant-caps: normal; orphans: 2; text-indent: 0px; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgba(4, 6, 5, 0.08); text-decoration-style: initial; text-decoration-color: initial;"><strong
+
+                      style="font-weight: bold; word-wrap: break-word;">BU111/BU121
+                      QUIZBOWLS</strong></h3>
+                  <p class="text-align-center" style="text-align: center; word-wrap: break-word; color: rgba(0, 0, 0, 0.66); font-family: Raleway; font-size: 15px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: 0.4px; orphans: 2; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgba(4, 6, 5, 0.08); text-decoration-style: initial; text-decoration-color: initial;"
+
+                    id="yui_3_17_2_1_1512003927251_1913">The 2 major business
+                    courses taken in first year include BU111: Understanding the
+                    Business Environment, and BU121: Functional Areas of the
+                    Organization. Each quizbowl is designed to provide a<span>&nbsp;</span><strong
+
+                      id="yui_3_17_2_1_1512003927251_1912" style="font-weight: bold; word-wrap: break-word;">comprehensive
+                      review of course content in preparation for the final exam</strong>.
+                    Teaching Assistants and Supplemental Instruction Leaders are
+                    brought in to offer clarity on key concepts and walk through
+                    of a mock midterm during the event. Students are encouraged
+                    to ask questions and talk out difficult problems.</p>
+                </figcaption><span style="color: rgba(0, 0, 0, 0.66);"><span style="font-family: Raleway;">
+                  </span></span><span style="color: rgba(0, 0, 0, 0.66);"><span
+
+                    style="font-family: Raleway;"></span><span style="font-family: Raleway;"></span></span></figure>
             </article>
           </section>
-          <!-- / Introduction --> </div>
-        <!-- / content body --> </div>
-    </div>
-    <!-- Footer -->
-    <div class="wrapper row3">
-      <div id="footer" class="clear">
-        <!-- Section One -->
-        <section class="one_quarter">
-          <h2 class="title">Link Block</h2>
-          <nav>
-            <ul>
-              <li><a href="#">Lorem ipsum dolor sit</a></li>
-              <li><a href="#">Amet consectetur</a></li>
-              <li><a href="#">Praesent vel sem id</a></li>
-              <li><a href="#">Curabitur hendrerit est</a></li>
-              <li class="last"><a href="#">Sed a nulla urna</a></li>
-            </ul>
-          </nav>
-        </section>
-        <!-- Section Two -->
-        <section class="one_quarter">
-          <h2 class="title">Link Block</h2>
-          <nav>
-            <ul>
-              <li><a href="#">Lorem ipsum dolor sit</a></li>
-              <li><a href="#">Amet consectetur</a></li>
-              <li><a href="#">Praesent vel sem id</a></li>
-              <li><a href="#">Curabitur hendrerit est</a></li>
-              <li class="last"><a href="#">Sed a nulla urna</a></li>
-            </ul>
-          </nav>
-        </section>
-        <!-- Section Three -->
-        <section class="one_quarter">
-          <h2 class="title">Link Block</h2>
-          <nav>
-            <ul>
-              <li><a href="#">Lorem ipsum dolor sit</a></li>
-              <li><a href="#">Amet consectetur</a></li>
-              <li><a href="#">Praesent vel sem id</a></li>
-              <li><a href="#">Curabitur hendrerit est</a></li>
-              <li class="last"><a href="#">Sed a nulla urna</a></li>
-            </ul>
-          </nav>
-        </section>
-        <!-- Section Four -->
-        <section class="one_quarter lastbox">
-          <h2 class="title">Link Block</h2>
-          <nav>
-            <ul>
-              <li><a href="#">Lorem ipsum dolor sit</a></li>
-              <li><a href="#">Amet consectetur</a></li>
-              <li><a href="#">Praesent vel sem id</a></li>
-              <li><a href="#">Curabitur hendrerit est</a></li>
-              <li class="last"><a href="#">Sed a nulla urna</a></li>
-            </ul>
-          </nav>
-        </section>
-        <!-- / Section --> </div>
+        </div>
+      </div>
     </div>
     <!-- Copyright -->
     <div class="wrapper row4">
