@@ -185,7 +185,7 @@ input, textarea, select{font-size:12px; font-family:Georgia,"Times New Roman",Ti
               <figure><br>
                 <figcaption> </figcaption>
                 <div style="text-align: left;"><figcaption>
-                    <h2>We want to hear from you...</h2>
+                    <h2>We want to hear from you!</h2>
                     <p style="width: 424px;">We're here to help! Feel free to
                       reach out if you have any questions about what we do, our
                       events, our membership options, or anything else you want
@@ -207,18 +207,111 @@ if ($action=="")    /* display the contact form */    {    ?>
                     <textarea name="message" rows="7" cols="30"></textarea><br>
                     <input value="Send email" type="submit"> </form>
                   <!--?php
-    } else                /* send the submitted data */    {    $name=$_REQUEST['name'];
-    $email=$_REQUEST['email'];    $message=$_REQUEST['message'];    if (($name=="")||($email=="")||($message==""))        {
-        echo "All fields are required, please fill the form                  again."; } else{ $from="From:
-                  $name&lt;$email&gt;\r\nReturn-path: $email"; $subject="Message                  sent using your contact form";
+    } else                /* send the submitted data */    {    $name=$_REQUEST['name'];    $email=$_REQUEST['email'];    $message=$_REQUEST['message'];    if (($name=="")||($email=="")||($message==""))        {        echo "All fields are required, please fill the form                  again."; } else{ $from="From:                  $name&lt;$email&gt;\r\nReturn-path: $email"; $subject="Message                  sent using your contact form";
                   mail("mezz6260@mylaurier.ca", $subject, $message,                  $from); echo "Email sent!"; } } ?&gt; <a href=\"\"-->
                 </figcaption><figcaption> </figcaption> </figure>
             </article>
           </section>
           <!-- / Introduction --> </div>
+        <br>
+        <h1> Meet some of the members of our team...</h1>
+        <p><br>
+        </p>
+        <table style="width: 100%;" border="1">
+          <tbody>
+            <tr>
+              <td><img src="file:///C:/Users/Rocco/Desktop/basic-88/images/MTT1.png"
+
+                  alt="" style="width: 500px; height: 250px;"><br>
+              </td>
+              <td style="text-align: left;"><strong>Sara Baranski, Co-President<br>
+                  <br>
+                </strong>Sara is 3rd-year BBA student from Cambridge, Ontario
+                and is enrolled in the Co-op program. As a passionate leader
+                within many communities, she believes in the importance of
+                living a balanced lifestyle and encourages others not to take
+                life too seriously. Sara loves to laugh and is always ready for
+                an adventure. Over the next few years, Sara looks forward to
+                going on exchange, continuing to improve her field hockey skills
+                and making unforgettable memories with her friends. She is
+                interested in pursuing a career in consulting or business
+                development, but is an entrepreneurial spirit at heart.<strong><br>
+                </strong></td>
+            </tr>
+            <tr>
+              <td><img src="file:///C:/Users/Rocco/Desktop/basic-88/images/MTT2.png"
+
+                  alt="" style="width: 499px; height: 246px;"><br>
+              </td>
+              <td><strong>Benjamin Francoz, Co-President<br>
+                  <br>
+                </strong>Ben is a dedicated university student with great
+                leadership, communication, and organizational skills.&nbsp; Ben
+                is in his 3rd year at Wilfrid Laurier University, studying
+                Business Administration with Co-op (Accounting Option and
+                aspiring CPA) within the Lazaridis School of Business &amp;
+                Economics. Ben believes in the importance of continuous learning
+                and understands the importance of being able to balance
+                academics with life outside of the classroom in order to achieve
+                both personal and business success.</td>
+            </tr>
+            <tr>
+              <td><img src="file:///C:/Users/Rocco/Desktop/basic-88/images/MTT3.png"
+
+                  alt="" style="width: 499px; height: 334px;"><br>
+              </td>
+              <td><strong>Aaron Subel, VP Corporate Relations<br>
+                  <br>
+                </strong>Aaron is a 2nd-year student in the Lazaridis School of
+                Business &amp; Economics. Originally from Thornhill, Aaron is
+                interested in the marketing specialization following his past
+                experiences in internships and case competitions that
+                specialized in marketing.&nbsp; Aaron is an avid sports fan; he
+                enjoys watching the NBA, NHL and MLB and playing basketball and
+                tennis. Sport is a big part of Aaron's life and he hopes to
+                pursue a career in the business of sport in the future.</td>
+            </tr>
+            <tr>
+              <td><img src="file:///C:/Users/Rocco/Desktop/basic-88/images/MTT4.png"
+
+                  alt="" style="width: 499px; height: 334px;"><br>
+              </td>
+              <td><strong>Riley McPhail, VP of Student Engagement<br>
+                  <br>
+                </strong>Riley is a 2nd-year student pursuing a Bachelor of
+                Business Administration degree. Riley comes from Jacksons Point,
+                Ontario, a small cottage community on the southern shores of
+                Lake Simcoe. Riley has developed interests in finance,
+                organizational behaviour and personal fitness and dreams of
+                opening his own restaurant in the future. His passion for food
+                comes from the many family dinners he prepared for his family
+                throughout his time in high school.</td>
+            </tr>
+            <tr>
+              <td><img src="file:///C:/Users/Rocco/Desktop/basic-88/images/MTT6.png"
+
+                  alt="" style="width: 498px; height: 327px;"><br>
+              </td>
+              <td><strong>Jason Uruthiran, VP Academic Events<br>
+                  <br>
+                </strong>Jason is a 2nd-year student at the Lazaridis School of
+                Business &amp; Economics. Born and raised in Pickering, Jason is
+                interested in specializing in finance or accounting. He loves to
+                take the lead on initiatives and enjoys working with people who
+                share similar interests as him. Jason loves to play and watch
+                sports – he grew up playing soccer, but also loves watching
+                hockey with the boys. Recently, Jason went to Namaldi, Costa
+                Rica to help build an accessible classroom in a rural community.</td>
+            </tr>
+          </tbody>
+        </table>
+        <p><br>
+        </p>
+        <p><br>
+        </p>
         <!-- / content body --> </div>
     </div>
-    <!-- Footer --> 
+    <!-- Footer -->
     <!-- Copyright -->
     <div class="wrapper row4">
       <footer id="copyright" class="clear">
